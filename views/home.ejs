@@ -16,7 +16,18 @@
             <li><a href="/users/add">Add User</a></li>
         </ul>
     </nav>
-    <h1>This is home page</h1>
-    <button  type="button" class="btn btn-primary">Hello bootstrap</button>
+        <h1><%= productTitle %></h1>
+     <% if (productsData.length) { %>
+        <ul>
+            <% for (const product of productsData) { %>
+                <li>
+                    <strong>Name:</strong> <%= product.name %><br>
+                    <strong>Price:</strong> <%= product.price %><br>
+                </li>
+            <% } %>
+        </ul>
+    <% } else { %>
+        <p>No products available</p>
+    <% } %>
 </body>
 </html>
