@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const users = require("./routes/users");
 const home = require("./routes/home");
+const productRecords = require('./routes/productRecords')
 const path = require("path");
 const rooDir = require("./utility/util");
 //--Set the ejs
@@ -13,6 +14,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/", home);
 app.use("/users", users);
+app.use('/products', productRecords);
 app.use(
   "/css",
   express.static(path.join(rooDir, "node_modules", "bootstrap", "dist", "css"))
