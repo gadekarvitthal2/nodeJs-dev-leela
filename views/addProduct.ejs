@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-</head>
-<body>
-    <header>Ecommers website</header>
-    <nav>
-        <ul>
-            <li><a href="/">home</a></li>
-            <li><a href="/users/add">Add User</a></li>
-        </ul>
-    </nav>
+<%- include('../common/head.ejs') %>
+<%- include('../common/nav.ejs') %>
     <form method="post">
         <div class="container">
             <div  class="row">
@@ -33,5 +19,4 @@
             </div>
         </div>
     </form>
-</body>
-</html>
+    <%- include('../common/footer.ejs') %>
